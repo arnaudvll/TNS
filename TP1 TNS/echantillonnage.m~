@@ -1,0 +1,7 @@
+function [t,x,K]=echantillonnage(A1,A2,v1,v2,phi1,phi2,td,tf,ve)
+    t=td:1/ve:tf+1/ve;
+    k=t*ve;
+    [k,x=sequence(A1,v1/ve,phi1,ceil(k(1)),floor(k(end)))+sequence(A2,v2/ve,phi2,ceil(k(1)),floor(k(end)));
+    K=length(t);
+end
+
