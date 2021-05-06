@@ -8,25 +8,25 @@ X1=fft(x,K);
 %abscisses en indice
 figure(1)
 subplot(2,2,1);
-plot(k,real(X1))
+stem(k,real(X1))
 xlim([0 K-1])
 title('partie réelle')
 xlabel('indice')
 
 subplot(2,2,2);
-plot(k,imag(X1))
+stem(k,imag(X1))
 xlim([0 K-1])
 title('partie imaginaire')
 xlabel('indice')
 
 subplot(2,2,3);
-plot(k,abs(X1))
+stem(k,abs(X1))
 xlim([0 K-1])
 title('module')
 xlabel('indice')
 
 subplot(2,2,4);
-plot(k,angle(X1))
+stem(k,angle(X1))
 xlim([0 K-1])
 title('phase')
 xlabel('indice')
@@ -36,22 +36,22 @@ f=k/K;
 figure(2)
 
 subplot(2,2,1);
-plot(f,real(X1))
+stem(f,real(X1))
 title('partie réelle')
 xlabel('fréquence réduite')
 
 subplot(2,2,2);
-plot(f,imag(X1))
+stem(f,imag(X1))
 title('partie imaginaire')
 xlabel('fréquence réduite')
 
 subplot(2,2,3);
-plot(f,abs(X1))
+stem(f,abs(X1))
 title('module')
 xlabel('fréquence réduite')
 
 subplot(2,2,4);
-plot(f,angle(X1))
+stem(f,angle(X1))
 title('phase')
 xlabel('fréquence réduite')
 
@@ -60,27 +60,27 @@ v=f*5;
 figure(3)
 
 subplot(2,2,1);
-plot(v,real(X1))
+stem(v,real(X1))
 title('partie réelle')
 xlim([0 5])
 xlabel('fréquence réelle (kHz)')
 
 subplot(2,2,2);
-plot(v,imag(X1))
+stem(v,imag(X1))
 title('partie imaginaire')
 xlim([0 5])
 xlabel('fréquence réelle (kHz)')
 
 
 subplot(2,2,3);
-plot(v,abs(X1))
+stem(v,abs(X1))
 title('module')
 xlim([0 5])
 xlabel('fréquence réelle (kHz)')
 
 
 subplot(2,2,4);
-plot(v,angle(X1))
+stem(v,angle(X1))
 title('phase')
 xlim([0 5])
 xlabel('fréquence réelle (kHz)')
